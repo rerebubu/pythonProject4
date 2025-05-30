@@ -11,6 +11,23 @@
   <a href="/catalog" class="main-button">Смотреть товары</a>
 </section>
 
+<!-- Добавленное описание компании -->
+<section class="about-company">
+  <div class="container">
+    <h2>О компании</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p><strong>Ковольспорт</strong> - это ведущий поставщик спортивных товаров с 2010 года. Мы сотрудничаем напрямую с мировыми производителями спортивного оборудования, одежды и аксессуаров.</p>
+        <p>Наша миссия - делать спорт доступным для каждого, предлагая качественное снаряжение по справедливым ценам. В нашем ассортименте представлено более 5000 товаров для профессиональных спортсменов и любителей.</p>
+        <p>Мы не просто продаем товары - мы помогаем подобрать оптимальное решение для ваших спортивных целей. Наши консультанты - действующие спортсмены и тренеры с многолетним опытом.</p>
+      </div>
+      <div class="about-image">
+        <img src="/static/img/store-interior.png" alt="Магазин Ковольспорт">
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="advantages">
   <h2 class="advantages-title">Почему мы?</h2>
 
@@ -45,7 +62,78 @@
   </div>
 </section>
 
+<!-- Добавленная секция популярных товаров -->
+<section class="popular-products">
+  <h2>Популярные товары</h2>
+  <div class="products-grid">
+    <!-- Товар 1 -->
+    <div class="product-card">
+      <img src="/static/img/product1.jpg" alt="Беговые кроссовки">
+      <h3>Беговые кроссовки RunPro X</h3>
+      <p class="price">4 999 ₽</p>
+      <a href="/product/1" class="product-btn">Подробнее</a>
+    </div>
+
+    <!-- Товар 2 -->
+    <div class="product-card">
+      <img src="/static/img/product2.jpg" alt="Тапочки в бассейн">
+      <h3>Тапочки в бассейн Premium</h3>
+      <p class="price">1 299 ₽</p>
+      <a href="/product/2" class="product-btn">Подробнее</a>
+    </div>
+
+    <!-- Товар 3 -->
+    <div class="product-card">
+      <img src="/static/img/product3.jpg" alt="Спортивная футболка раналду">
+      <h3>Раналду футболка </h3>
+      <p class="price">3 799 ₽</p>
+      <a href="/product/3" class="product-btn">Подробнее</a>
+    </div>
+  </div>
+  <a href="/catalog" class="view-all">Смотреть все товары →</a>
+</section>
+
+<section class="categories">
+  <h2>Выбирайте категорию</h2>
+  <div class="category-links">
+    <a href="/catalog#running" class="category-btn">Бег</a>
+    <a href="/catalog#fitness" class="category-btn">Фитнес</a>
+    <a href="/catalog#outdoor" class="category-btn">Туризм</a>
+    <a href="/catalog?filter=sale" class="category-btn">Акции</a>
+  </div>
+</section>
+
+<!-- Добавленная секция отзывов -->
+<section class="reviews">
+  <h2>Отзывы наших клиентов</h2>
+  <div class="reviews-container">
+    <div class="review">
+      <div class="review-author">Алексей К.</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Заказывал беговые кроссовки - доставили быстрее, чем обещали! Качество на высоте, буду покупать ещё."</p>
+    </div>
+    <div class="review">
+      <div class="review-author">Марина С.</div>
+      <div class="review-stars">★★★★☆</div>
+      <p class="review-text">"Отличный магазин с грамотными консультантами. Помогли подобрать экипировку для трейлраннинга."</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-block">
+  <h2>Есть вопросы?</h2>
+  <p>Мы всегда рады помочь!</p>
+  <a href="tel:+380123456789" class="phone">+8 (800) 555-35-35</a>
+  <p>Или пишите в Telegram/Viber</p>
+  <div class="social-links">
+    <a href="#" class="social-icon">📱</a>
+    <a href="#" class="social-icon">💬</a>
+    <a href="#" class="social-icon">📧</a>
+  </div>
+</section>
+
 <style>
+/* Существующие стили */
 .advantages {
   padding: 40px 20px;
   background: #f9fafb;
@@ -96,26 +184,196 @@
   line-height: 1.5;
 }
 
+/* Новые стили */
+.about-company {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.about-company .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.popular-products {
+  padding: 60px 20px;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  color: #2d3748;
+}
+
+.price {
+  font-weight: bold;
+  color: #2b6cb0;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.product-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #4299e1;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.product-btn:hover {
+  background: #3182ce;
+}
+
+.view-all {
+  display: inline-block;
+  margin-top: 20px;
+  color: #4299e1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.reviews {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.reviews-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  justify-content: center;
+}
+
+.review {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.review-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review-stars {
+  color: #f6ad55;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  font-style: italic;
+  color: #4a5568;
+}
+
+.contact-block {
+  padding: 40px 20px;
+  background: #2b6cb0;
+  color: white;
+  text-align: center;
+}
+
+.contact-block h2 {
+  margin-bottom: 15px;
+}
+
+.phone {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin: 15px 0;
+  text-decoration: none;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: white;
+}
+
 @media (max-width: 768px) {
-  .advantages-grid {
+  .advantages-grid,
+  .products-grid,
+  .reviews-container {
     grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>
-
-<section class="categories">
-  <h2>Выбирайте категорию</h2>
-  <div class="category-links">
-    <a href="/catalog#running" class="category-btn">Бег</a>
-    <a href="/catalog#fitness" class="category-btn">Фитнес</a>
-    <a href="/catalog#outdoor" class="category-btn">Туризм</a>
-    <a href="/catalog?filter=sale" class="category-btn">Акции</a>
-  </div>
-</section>
-
-<section class="contact-block">
-  <p>Есть вопросы? Звоните!</p>
-  <a href="tel:+380123456789" class="phone">+8 (800) 555-35-35</a>
-  <p>Или пишите в Telegram/Viber</p>
-</section>
 {% endblock %}

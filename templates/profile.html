@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Профиль пользователя{% endblock %}
+
+{% block body %}
+<div class="profile-container">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow">
+          <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Профиль пользователя</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <!-- Левая колонка с фото -->
+              <div class="col-md-4 text-center">
+                <div class="profile-avatar mb-4">
+                  <img src="{{ url_for('static', filename='img/Unknown.jpeg') }}"
+                       class="img-fluid rounded-circle"
+                       style="width: 150px; height: 150px; object-fit: cover;"
+                       alt="Фото профиля">
+                </div>
+              </div>
+
+              <!-- Правая колонка с информацией -->
+              <div class="col-md-8">
+                <div class="profile-info">
+                  <h2 class="mb-3">{{ current_user.username }}</h2>
+
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <h6 class="mb-0">Email:</h6>
+                        </div>
+                        <div class="col-sm-8">
+                          {{ current_user.email }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

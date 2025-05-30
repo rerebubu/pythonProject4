@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}
+О нас
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1 class="mb-4">О нас</h1>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="about-content">
+                <h2>Ковольспорт — ваш путь к активной жизни!</h2>
+
+                <p>Добро пожаловать в мир <strong>Ковольспорт</strong> — места, где рождаются чемпионы, а спорт становится частью каждого дня!</p>
+
+                <h3>Кто мы?</h3>
+                <ul>
+                    <li><strong>Ковольспорт</strong> — это не просто магазин спортивных товаров.</li>
+                    <li>Команда энтузиастов, спортсменов и экспертов, объединенных любовью к здоровому образу жизни.</li>
+                    <li>Работаем с 2010 года, подбирая лучшее снаряжение, одежду и аксессуары.</li>
+                </ul>
+
+                <!-- Остальной контент ... -->
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h4 class="card-title">Мы находимся</h4>
+
+                    <!-- Блок с Яндекс.Картой -->
+                    <div class="ratio ratio-16x9 mb-3">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a2b3c4d5e6f7g8h9i0j&amp;lang=ru_RU&amp;scroll=true&amp;mode=search&amp;text=г.%20Москва,%20ул%20Бестужевых%20дом%2012"
+                            frameborder="0"
+                            style="border:0;"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+
+                    <!-- Блок с адресом и часами работы -->
+                    <div class="contact-info">
+                        <h5 class="fw-bold mb-2">Контакты</h5>
+                        <p class="mb-1">
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            г. Москва, ул Бестужевых дом 12
+                        </p>
+                        <p class="mb-1">
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            +7 (800) 555 35 35
+                        </p>
+                        <p class="mb-0">
+                            <i class="bi bi-clock-fill me-2"></i>
+                            Ежедневно с 9:00 до 21:00
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .contact-info p {
+        margin-bottom: 0.5rem;
+    }
+    .about-content ul {
+        padding-left: 1.2rem;
+    }
+    .about-content li {
+        margin-bottom: 0.7rem;
+    }
+</style>
+{% endblock %}

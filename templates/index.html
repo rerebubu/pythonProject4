@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<section class="main-block">
+  <h1>Ковольспорт</h1>
+  <p class="slogan">Ваш надёжный партнёр в мире спорта</p>
+  <a href="/catalog" class="main-button">Смотреть товары</a>
+</section>
+
+<section class="advantages">
+  <h2 class="advantages-title">Почему мы?</h2>
+
+  <div class="advantages-grid">
+    <!-- Карточка 1 -->
+    <div class="advantage-card">
+      <div class="advantage-icon">🏅</div>
+      <h3 class="advantage-heading">Оригинальные товары</h3>
+      <p class="advantage-text">Сертифицированная продукция от мировых брендов</p>
+    </div>
+
+    <!-- Карточка 2 -->
+    <div class="advantage-card">
+      <div class="advantage-icon">🛡</div>
+      <h3 class="advantage-heading">Гарантия 30 дней</h3>
+      <p class="advantage-text">Возврат и обмен даже после использования</p>
+    </div>
+
+    <!-- Карточка 3 -->
+    <div class="advantage-card">
+      <div class="advantage-icon">👨💻</div>
+      <h3 class="advantage-heading">Экспертная поддержка</h3>
+      <p class="advantage-text">Консультации от спортсменов и тренеров</p>
+    </div>
+
+    <!-- Карточка 4 -->
+    <div class="advantage-card">
+      <div class="advantage-icon">🚚</div>
+      <h3 class="advantage-heading">Быстрая доставка</h3>
+      <p class="advantage-text">Отправка в день заказа • Наложенный платеж</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.advantages {
+  padding: 40px 20px;
+  background: #f9fafb;
+}
+
+.advantages-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #1a365d;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advantage-card {
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+}
+
+.advantage-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.advantage-heading {
+  color: #2d3748;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.advantage-text {
+  color: #718096;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<section class="categories">
+  <h2>Выбирайте категорию</h2>
+  <div class="category-links">
+    <a href="/catalog#running" class="category-btn">Бег</a>
+    <a href="/catalog#fitness" class="category-btn">Фитнес</a>
+    <a href="/catalog#outdoor" class="category-btn">Туризм</a>
+    <a href="/catalog?filter=sale" class="category-btn">Акции</a>
+  </div>
+</section>
+
+<section class="contact-block">
+  <p>Есть вопросы? Звоните!</p>
+  <a href="tel:+380123456789" class="phone">+8 (800) 555-35-35</a>
+  <p>Или пишите в Telegram/Viber</p>
+</section>
+{% endblock %}

@@ -1,0 +1,38 @@
+# Конфиденциальные данные
+/config.py
+*.env
+.env
+secrets.ini
+config.py
+/migrations/
+# Файлы базы данных
+*.db
+*.sqlite
+*.db-journal
+
+# Кэш и временные файлы
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Логи и дампы
+*.log
+*.dump
+
+# IDE и редакторы
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+
+# Статические файлы (если используете CDN)
+/static/uploads/
+
+# macOS
+.DS_Store
